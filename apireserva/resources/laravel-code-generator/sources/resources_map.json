@@ -1,0 +1,47 @@
+[
+    {
+        "model-name": "Specialie",
+        "resource-file": "specialies.json",
+        "table-name": "specialies"
+    },
+    {
+        "model-name": "User",
+        "resource-file": "users.json",
+        "table-name": "users"
+    },
+    {
+        "model-name": "Rol",
+        "resource-file": "rols.json",
+        "table-name": "rols"
+    },
+    {
+        "model-name": "Specialtie",
+        "resource-file": "specialties.json",
+        "table-name": "specialties"
+    },
+    {
+        "model-name": "Clinic",
+        "resource-file": "clinics.json",
+        "table-name": "clinics"
+    },
+    {
+        "model-name": "Patient",
+        "resource-file": "patients.json",
+        "table-name": "patients"
+    },
+    {
+        "model-name": "Doctor",
+        "resource-file": "doctors.json",
+        "table-name": "doctors"
+    },
+    {
+        "model-name": "Reservation",
+        "resource-file": "reservations.json",
+        "table-name": "reservations"
+    },
+    {
+        "model-name": "Horary",
+        "resource-file": "horaries.json",
+        "table-name": "horaries"
+    }
+]

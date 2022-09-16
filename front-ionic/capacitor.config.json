@@ -1,0 +1,15 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "GameStore",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "cleartext": true,
+    "hostname": "app",
+    "androidScheme": "http",
+    "allowNavigation": [
+      "localhost",
+      "192.168.0.161"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form (ngSubmit)="login()" [formGroup]="formGroup">
+    <div class="input-group">
+      <ion-item>
+        <ion-input type="text" placeholder="ejemplo@gmail.com" formControlName="email"></ion-input>
+      </ion-item>
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">Usuario es requerido.</span>
+        <span *ngIf="email.errors?.email">Email is invalid</span>
+      </div>
+      <ion-item>
+        <ion-input [type]="!hidepassword ? 'password' : 'text'" placeholder="Contraseña" formControlName="password"></ion-input>
+        <ion-button color='light'  (click)="hidepassword = !hidepassword" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hidepassword">
+          <ion-icon name="{{hidepassword ? 'eye-outline' : 'eye-off-outline'}}"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Contraseña es requerido.</span>
+        <span *ngIf="password.errors?.minlength">Password needs to be 6 characters</span>
+      </div>
+    </div>
+
+    <ion-button type="submit" expand="block" [disabled]="!formGroup.valid">Iniciar sesión</ion-button>
+    <!--    <ion-button type="button" expand="block" color="light" fill="clear">Not yet a member? Sign up!-->
+    <!--    </ion-button>-->
+
+
+    <!--    <ion-button type="button" expand="block" color="tertiary">-->
+    <!--      <ion-icon name="logo-apple" slot="start"></ion-icon>-->
+    <!--      Sign in with Apple-->
+    <!--    </ion-button>-->
+  </form>
+
+    <ion-button type="button" expand="block"   fill="outline" routerLink='/register' >
+      <!--    <ion-icon name="logo-google" slot="start"></ion-icon>-->
+      <ion-text color='light'>   Registrarme </ion-text>
+
+    </ion-button>
+
+</ion-content>

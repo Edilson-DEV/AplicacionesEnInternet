@@ -1,0 +1,23 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Cambiar Rol</ion-title>
+    <!--    <ion-buttons slot="end">-->
+    <!--      <ion-button (click)="dismiscscModal()">Cerrar</ion-button>-->
+    <!--    </ion-buttons>-->
+    <ion-buttons slot="start">
+      <ion-back-button text="Atras"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <form (ngSubmit)="save()" [formGroup]="formGroup">
+    <div class="input-group">
+      <ion-item>
+        <ion-input type="text" placeholder="1: admin , 2: paciente, 3:medico" formControlName="rol_id"></ion-input>
+      </ion-item>
+    </div>
+
+    <ion-button type="button" expand="block" (click)='save()'>Guardar</ion-button>
+  </form>
+</ion-content>

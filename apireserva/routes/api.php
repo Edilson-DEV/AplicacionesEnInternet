@@ -56,6 +56,8 @@ Route::get('/greeting', function () {
 //         ->name('api.rols.rol.destroy');
 //});
 
+// para proteger la rutas      =>      middleware('auth:api')
+
 Route::middleware('auth:api')->prefix('/clinics')->group(function(){
     Route::get('/', [ClinicsController::class, 'index'])
          ->name('api.clinics.clinic.index');

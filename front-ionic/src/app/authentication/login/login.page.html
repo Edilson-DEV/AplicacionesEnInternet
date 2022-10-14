@@ -1,20 +1,43 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Iniciar sesión</ion-title>
+<ion-header  class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>login</ion-title> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+<!--  <ion-row responsive-sm>-->
+<!--    <ion-col>-->
+
+  <div class="center">
+<!--      <img class="user-avatar round" style="height: auto; " [src]="chosenPicture || placeholder"-->
+<!--           onerror="this.src='assets/images/header.png'">-->
+      <img src="assets/images/Medic.svg" style="border: 0;height: 30%;object-fit: cover; width: 30%;">
+
+  </div>
+
+<!--      <ion-icon name="create"></ion-icon>-->
+
+<!--    </ion-col>-->
+<!--  </ion-row>-->
+
+    <ion-card-title>
+      Bienvenido
+    </ion-card-title>
+
   <form (ngSubmit)="login()" [formGroup]="formGroup">
-    <div class="input-group">
+    <div class="signin-btns">
       <ion-item>
         <ion-input type="text" placeholder="ejemplo@gmail.com" formControlName="email"></ion-input>
+        <ion-icon name="mail-outline"></ion-icon>
       </ion-item>
+
       <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
         <span *ngIf="email.errors?.required">Usuario es requerido.</span>
         <span *ngIf="email.errors?.email">Email is invalid</span>
       </div>
+
+
       <ion-item>
         <ion-input [type]="!hidepassword ? 'password' : 'text'" placeholder="Contraseña" formControlName="password"></ion-input>
         <ion-button color='light'  (click)="hidepassword = !hidepassword" [attr.aria-label]="'Hide password'"
@@ -22,6 +45,9 @@
           <ion-icon name="{{hidepassword ? 'eye-outline' : 'eye-off-outline'}}"></ion-icon>
         </ion-button>
       </ion-item>
+
+
+
       <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
         <span *ngIf="password.errors?.required">Contraseña es requerido.</span>
         <span *ngIf="password.errors?.minlength">Password needs to be 6 characters</span>
@@ -46,3 +72,5 @@
     </ion-button>
 
 </ion-content>
+
+

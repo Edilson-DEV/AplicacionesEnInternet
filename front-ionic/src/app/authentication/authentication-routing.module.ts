@@ -12,12 +12,21 @@ const routes: Routes = [
           canLoad: [AutoLoginGuard]
         },
 
+        {
+          path: 'recovery',
+          loadChildren: () => import('./recovery/recovery.module').then( m => m.RecoveryPageModule)
+        }
+
+
       ]
     },
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  }
+  },
+
+
+
 
   ]
 ;

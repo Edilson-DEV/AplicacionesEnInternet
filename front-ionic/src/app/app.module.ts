@@ -10,12 +10,20 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpInterceptors} from './interceptors/http.interceptor';
 import {JwtInterceptor} from './interceptors/jwt.interceptor';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ErrorHandlerInterceptor} from "./interceptors/error-handler.interceptor";
+import {ErrorHandlerInterceptor} from './interceptors/error-handler.interceptor';
+import {ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, BrowserAnimationsModule],
+  imports: [BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule
+  ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptors, multi: true},

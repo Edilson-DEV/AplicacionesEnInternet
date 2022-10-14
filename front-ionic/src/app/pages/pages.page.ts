@@ -13,6 +13,7 @@ export class PagesPage implements OnInit {
     // {title: 'Usuarios', url: '/users', icon: 'people', rol: 'admin'},
     {title: 'Usuarios', url: '/users', icon: 'people', rol: 'Admin'},
     {title: 'Home', url: '/home', icon: 'document-text', rol: ''},
+    {title: 'Atencion Cita', url: '/atencioncita', icon: 'calendar', rol: 'Medico'},
   ];
   public labels = [];
   usuario: any;

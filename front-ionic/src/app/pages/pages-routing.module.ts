@@ -22,6 +22,17 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
       },
 
+      {
+        path: 'atencioncita',
+        loadChildren: () => import('./atencioncita/atencioncita.module').then( m => m.AtencioncitaPageModule)
+      },
+
+      {
+        path: 'change-password',
+        loadChildren: () => import('./change-password/change-password.module').then( m => m.ChangePasswordPageModule)
+      },
+
+
 
     ]
   },
@@ -30,6 +41,9 @@ const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   },
+
+
+
 ];
 
 @NgModule({
